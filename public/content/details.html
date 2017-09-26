@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8">
+	<title>详情</title>
+	<link rel="stylesheet" type="text/css" href="../css/details.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/logreg.css">
+</head>
+<body>
+    <div class="main">
+    	<div class="head">
+    		<img src="../images/logo1.png">
+    		<div id="ulogin">
+                <a href="javascript:;" id="register">注册</a>
+                <a href="javascript:;" id="login">登录</a>
+            </div>
+            <div id="useron">
+                <img src="../images/user.png">
+                <a href="javascript:;" id="cancel">注销</a>
+                <span id="username"></span>
+            </div> 
+    		
+    	</div>
+
+        <div class="nav">
+            <div class="nav_list">
+                <a href="../index.html">首页</a>
+                <a href="list.html" style="background: #00bfff;">web前端</a>
+                <a href="learn.html">学无止境</a>
+                <a href="leave_message.html">留言</a>
+                <a href="about.html">关于我</a>
+                    
+            </div>
+            <span><input type="text" name="" placeholder="输入关键字/关键词"><img src="../images/serach.png"></span>
+
+            
+        </div>
+    	<div class="content">
+    		<div class="list">
+    			<div class="list_left"> 
+                    <h3>css3实现五角星实例</h3>
+                    <div class="title">
+                        
+
+                        <span class="author"><img src="../images/details/author.png">陈星</span>
+                        <span class="date"><img src="../images/details/date.png">2017-07-03</span>
+                        
+                    </div>
+                    
+    				
+    				<div class="list_cont">
+                       <p>这里主要讲css3制作五角星图形实例。以前我们需要用到五角星或者其它形状图形的时候大多数是通过背景图片来代替的，随着css3的出现，我们完全可以使用css3伪元素和变换特性来做五角星图形了。如果大家只做移动端或者pc端不考虑低版本的IE浏览器，可以使用css3来实现五角星图形，使用图片实现五角星已经毫无必要，因为图片占用额外的请求，且数据量大。</p><br>
+
+                       <p>那么该如何使用css3制作五角星呢?如图所示：</p>
+                        
+                        <img src="../images/details/d1.png">
+                        <p>先了解一些css3的属性：</p>
+                        <p>transform:属性向元素应用2D或3D转换,对元素进行旋转、缩放、移动或倾斜,这里主要是用到旋转。</p>
+                        <p>rotate：角度，可以定义2D旋转、3D旋转，这里只用到2D旋转。</p>
+                        <p>before：伪类选择器，在..之前。</p>
+                        <p>after:伪类选择器，在..之后。</p><br>
+                        <p>实现原理:</p>
+                        <p>其实制作这个五角星很简单的，就是做出三个三角图形然后通过旋转角度最后通过定位把它们组合在一起就成了五角星了。</p><br>
+                        <p>为了让大家直观点，我把三个三角图形的颜色改下，如图所示：</p>
+                        <img src="../images/details/d2.png">
+                        <p>好了不多说了，接下来是贴代码...</p>
+                        <img src="../images/details/d3.png" style="margin:10px 0 0 20px;">
+                        <p>这样我们就实现了五角星图形了，细细琢磨下，我们是否也可以用类似的方法制作出其它形状的图形呢？答案是肯定的。</p><br>
+                        <p>如有疑问或者写的不对的地方，欢迎指出。</p>
+    					
+    				</div>
+                    <div class="list_foot">
+                        <a href="">上一篇：css3渐变实例 </a>
+                        <a href="">下一篇：hsl实现背景颜色渐变交替实例</a>
+                        <ul>
+                            <li>分享给好友</li>
+                            <li><img src="../images/details/01.png"></li>
+                            <li><img src="../images/details/02.png"></li>
+                            <li><img src="../images/details/03.png"></li>
+                            <li><img src="../images/details/04.png"></li>
+                            <li><img src="../images/details/05.png"></li>
+                            <li><img src="../images/details/06.png"></li>
+                        
+
+
+                        </ul>
+                        
+                    </div>
+                    
+    			</div>
+    			<div class="list_right">
+    				<div class="list_rg">
+    					<em></em><span>栏目导航</span>
+    				</div>
+                    <div class="list_rg1">
+                        <a href="">JavaScript</a>
+                        <a href="">Jquery</a>
+                        <a href="">html5+css3</a>
+                        <a href="">前端设计</a>
+                        <a href="">其他框架</a>
+                    </div>
+                    <div class="list_rg2">
+                        <em></em><span>最新推荐</span>
+                        
+                    </div>
+
+                    <div class="list_rg3">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <span style="background: #fc0202;">1</span>
+                                    <p>css3渐变实例</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span style="background: #77d549;">2</span>
+                                    <p>css3实现五角星实例</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span style="background: #62c1ff;">3</span>
+                                    <p>利用js实现拖拽效果</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="djph">
+                        <div class="list_rg2">
+                            <em></em><span>点击排行</span>
+                            
+                        </div>
+
+                        <div class="list_rg3">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <span style="background: #fc0202;">1</span>
+                                        <p>css3渐变实例</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span style="background: #77d549;">2</span>
+                                        <p>css3实现五角星实例</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span style="background: #62c1ff;">3</span>
+                                        <p>利用js实现拖拽效果</p>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                            
+                    </div>
+
+    				    
+    			</div>
+    		</div>
+    	</div>
+    	<div class="footer">
+    		<div class="foot_nav">
+    			<a href="">关于我</a>  <span>| </span> <a href="">个人档案</a>  <span>| </span> <a href="">给我留言</a>  <span>| </span> <a href="">热点标签</a>
+    			<p>powered by：chenxing  粤ICP备16042815号-1</p>
+    		</div>
+    		<img src="../images/erweima.png">
+    	</div>
+    </div>
+
+     <div id="tanchu">
+        <div id="off">
+            <a href="javascript:;" id="close">×</a>
+        </div>
+        <div class="tclogo">
+            <img src="../images/logo1.png">
+            <span class="tcleft"></span>
+            <p>普通注册</p>
+            <span class="tcright"></span>
+            <input type="text" name="" placeholder="用户名">
+            <input type="password" name="" placeholder="密码">
+            <input type="password" name="" placeholder="确认密码">
+            <a href="javascript:;" class="reg" id="tc_reg">注册</a>
+            <strong>已有账号？<a href="javascript:;" id="login1">登录到博客</a></strong>
+            
+            
+        </div>
+    </div>
+    <div id="tanchuzezao">
+        
+    </div>
+
+    <div id="tanchu1">
+        <div id="off">
+            <a href="javascript:;" id="close1">×</a>
+        </div>
+        <div class="tclogo">
+            <img src="../images/logo1.png">
+            <span class="tcleft"></span>
+            <p>用户登录</p>
+            <span class="tcright"></span>
+            <input type="text" name="" placeholder="输入用户名">
+            <input type="password" name="" placeholder="密码">
+            <em><input type="checkbox" name="" class="sel"> 下次自动登录<a href="">忘记密码</a></em>
+            <a href="javascript:;" class="reg" id="btn">登录</a>
+            <strong>还没有账号？<a href="javascript:;" id="register1">立即注册</a></strong>
+            
+            
+        </div>
+    </div>
+    <div id="tanchuzezao1">
+        
+    </div>
+    <script type="text/javascript" src="../js/common.js"></script>
+
+
+</body>
+</html>

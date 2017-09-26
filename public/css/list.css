@@ -1,0 +1,156 @@
+.content{
+	height: 1478px;
+	padding: 1px;
+}
+
+
+.list_left>h3{
+	display: block;
+	height: 50px;
+	width: 720px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	border-bottom: 2px solid #fc0202;
+}
+
+.list_cont ul li{
+	height: 250px;
+	border-bottom: 1px solid #cccccc;
+}
+.list_cont img{
+	float: left;
+	margin: 40px 0 0 0;
+}
+.list_cont h3{
+	float: left;
+	margin: 40px 0 0 30px;
+	color: #fc0202;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+.list_cont p{
+	float: left;
+	font-size: 12px;
+	width: 488px;
+	height: 60px;
+	margin: -110px 0 0 230px;
+
+}
+.list_cont span{
+	float: left;
+	height: 20px;
+	width: 180px;
+	background:url(../images/index/date1.png) no-repeat;
+	text-indent: 32px;
+	font-size: 12px;
+	margin: -25px 0 0 230px;
+}
+.list_cont a{
+	float: left;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #1e90ff;
+	color: #fff;
+	font-size: 12px;
+	margin: -30px 0 0 630px;
+}
+
+.page{
+	height: 36px;
+	margin: 50px 0 0 188px;
+}
+.page a{
+    float: left;
+    font-size: 14px;
+	height: 36px;
+	width: 36px;
+	line-height: 36px;
+	text-align: center;
+	margin-right: 10px;
+	border-radius: 5px 
+}
+
+.list_rg em{
+	display: block;
+	width: 4px;
+	height: 25px;
+	background:#fc0202;
+	position: relative;
+	margin: 20px 0 0 0;
+}
+.list_rg span{
+    display: block;
+	height: 50px;
+	width: 430px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	position: relative;
+	margin: -40px 0 0 14px;
+}
+.list_rg1{
+	width: 450px;
+	margin-top: 10px;
+}
+.list_rg1 a{
+	float: left;
+	width: 128px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #e5e5e5;
+	border-radius: 5px;
+	font-size: 14px;
+	margin: 30px 20px 0 0;
+	color: #000;
+}
+
+.list_rg2 em{
+	display: block;
+	width: 4px;
+	height: 25px;
+	background:#fc0202;
+	position: relative;
+	margin: 180px 0 0 0;
+}
+.list_rg2 span{
+    display: block;
+	height: 50px;
+	width: 430px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	position: relative;
+	margin: -40px 0 0 14px;	
+}
+.list_rg3 ul{
+	margin-top: 25px;
+}
+.list_rg3 ul li{
+	height: 25px;
+	margin-top: 15px;
+}
+.list_rg3 ul span{
+	float: left;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 14px;
+	
+}
+.list_rg3 p{
+	position: relative;
+	margin-left: 36px;
+	color: #000;
+	font-size: 14px;
+}
+.djph{
+	position: relative;
+	margin-top: -120px;
+}

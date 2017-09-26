@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>后台登录</title>
+    <style type="text/css">
+        *{
+    margin: 0;
+    padding: 0;
+    }
+.main{
+    width: 1920px;
+    height: 950px;
+    background: url(bg.png) no-repeat;
+    background-size: 100%;
+    font-family: "微软雅黑";
+}
+
+
+.main .bg{
+    width: 420px;
+    height: 300px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 0 0 0 -210px;
+    opacity: 0.5;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+
+}
+.main .login{
+    width: 400px;
+    height: 280px;
+    background: #fff;
+    border-radius: 5px;
+    margin: 10px 0 0 -200px;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+
+}
+.content{
+    text-align: center;
+    margin: 30px 0 0 0;
+}
+.login h3{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.login span{
+    display: block;
+    margin-top: 20px;
+
+}
+.login input{
+    width: 200px;
+    height: 32px;
+
+    outline: none;
+    margin-left: 20px;
+}
+.login a{
+    display: block;
+    text-decoration: none;
+    height: 32px;
+    width: 270px;
+    background: #1e90ff;
+    color: #fff;
+    line-height: 32px;
+    text-align: center;
+    margin: 25px 0 0 -135px;
+    border:1px solid #1e90ff;
+    position: absolute;
+    left: 50%;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+ 
+        
+        <div class="bg">
+        </div>
+            <div class="login">
+            
+                <h3>后台管理系统</h3>
+                <div class="content">
+                    <span>用户：<input type="text" name="" id="userId"></span>
+                    <span>密码：<input type="password" name="" id="userPwd"></span>
+                    <a href="javascript:;" id="btn">登录</a>
+                        
+                </div>
+            
+            </div>      
+        
+    </div>
+    <script type="text/javascript">
+        var auId = document.getElementById('userId');
+        var auPwd = document.getElementById('userPwd');
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            var jsonData = {
+                adminUserId:auId.value,
+                adminUserPwd:auPwd.value
+            }
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST','/loginAdmin');
+            xhr.setRequestHeader('Content-Type','application/json');
+            xhr.send(JSON.stringify(jsonData));
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState ===4 && xhr.status ===200){
+                    var message = JSON.parse(xhr.responseText);
+                    if(message.code ===100){
+                        alert("登录成功");
+                        var adminId = message.id
+                        window.location ='admin.html?id='+adminId
+                    }
+                    else if(message.code == 102){
+                        alert('密码错误')
+                    }
+                    else{
+                        alert('账号不存在')
+                    }
+
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,157 @@
+.content{
+	height: 2094px;
+	padding: 1px;
+}
+
+.list_left h3{
+	margin: 20px 0 0 0;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fc0202;
+}
+.title{
+	margin-top: 15px;
+	height: 30px;
+	line-height: 30px;
+	border-top: 1px dashed #fc0202;
+	border-bottom: 1px dashed #fc0202;
+}
+.title span{
+	font-size: 12px;
+	color: #cfcfcf;
+
+}
+.author{
+	margin-left: 272px;
+}
+.date{
+	margin-left: 43px;
+}
+.title img{
+	margin-right: 8px;
+}
+.list_cont{
+	margin-top: 20px;
+}
+.list_cont p{
+	text-indent:2em;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+.list_foot{
+	margin-top: 50px;
+	height: 60px;
+	border-top: 1px dashed #fc0202;
+	border-bottom: 1px dashed #fc0202;
+}
+.list_foot a{
+	display: block;
+	color: #000;
+	font-size: 14px;
+	margin-top: 6px;
+
+
+}
+.list_foot ul{
+	margin: -30px 0 0 388px;
+}
+.list_foot ul li{
+	float: left;
+	margin-left: 12px;
+	font-size: 14px;
+
+
+}
+.list_foot img{
+	margin-top: -3px;
+}
+
+
+
+
+
+
+.list_rg em{
+	display: block;
+	width: 4px;
+	height: 25px;
+	background:#fc0202;
+	position: relative;
+	margin: 20px 0 0 0;
+}
+.list_rg span{
+    display: block;
+	height: 50px;
+	width: 430px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	position: relative;
+	margin: -40px 0 0 14px;
+	
+
+}
+.list_rg1{
+	width: 450px;
+	margin-top: 10px;
+}
+.list_rg1 a{
+	float: left;
+	width: 128px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #e5e5e5;
+	border-radius: 5px;
+	font-size: 14px;
+	margin: 30px 20px 0 0;
+	color: #000;
+}
+
+.list_rg2 em{
+	display: block;
+	width: 4px;
+	height: 25px;
+	background:#fc0202;
+	position: relative;
+	margin: 180px 0 0 0;
+}
+.list_rg2 span{
+    display: block;
+	height: 50px;
+	width: 430px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	position: relative;
+	margin: -40px 0 0 14px;	
+}
+.list_rg3 ul{
+	margin-top: 25px;
+}
+.list_rg3 ul li{
+	height: 25px;
+	margin-top: 15px;
+}
+.list_rg3 ul span{
+	float: left;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	font-size: 14px;
+	
+}
+.list_rg3 p{
+	position: relative;
+	margin-left: 36px;
+	color: #000;
+	font-size: 14px;
+}
+.djph{
+	position: relative;
+	margin-top: -120px;
+}

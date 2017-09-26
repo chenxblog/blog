@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+</head>
+<body>
+    <div class="main">
+        <div class="main_left">
+            <img src="../images/admin/logo.png" style="margin: 30px 0 0 54px;">
+            <p><img src="../images/admin/gzt.png">管理工作台</p>
+        <div class="left_nav">
+            <ul id="gn-zj">
+                <li gn-zj='addArticle' ind='1'><em></em>添加文章管理</li>
+                <li gn-zj='articleList' ind='2'><em></em>文章列表管理</li>
+                <li gn-zj='customerAccount' ind='3'><em></em>用户账号管理</li>
+                <li gn-zj='articleComment' ind='4'><em></em>文章评论管理</li>
+                <li gn-zj='personal' ind='5'><em></em>个人信息管理</li>
+               
+            </ul>
+        </div>
+        </div>
+        <div class="main_right">
+            <div class="top">
+                <p>后台管理系统</p>
+                <div class="top_nav">
+                    <a href=""><img src="../images/admin/nav1.png" class="img1"><p>首页</p></a>
+                    <a href=""><img src="../images/admin/nav2.png"><p>修改密码</p></a>
+                    <a href=""><img src="../images/admin/nav3.png"><p>通知公共</p></a>
+                    <a href=""><img src="../images/admin/nav4.png"><p>注销</p></a>
+                </div>
+            
+            
+            </div>
+            
+
+
+            <div class="content" id="listContent">
+                <div class="aA_nav">
+                    <a href=""><img src="../images/admin/weizhi.png"><span>当前位置: 首页 > 管理工作台 > 添加文章管理</span></a>
+                    <div class="aA_nav1">
+                        <a href=""><img src="../images/admin/touxiang.png"><span>chenxing</span></a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var gnzj = document.getElementById('gn-zj');
+        var listLi = gnzj.getElementsByTagName('li');
+        var listContent = document.getElementById('listContent');
+        var num = 1;
+        var cx_id,cx_name,cx_pwd,cx_sex,cx_age,cx_img;
+        var urlStr = window.location.search;
+        var us = urlStr.substring(1);
+        var arrUs = us.split('=');
+        var xhr1 = new XMLHttpRequest();
+            xhr1.open('POST','/userCheck');
+            xhr1.setRequestHeader('Content-Type','application/json');
+            xhr1.send(JSON.stringify({id:arrUs[1]}));
+            xhr1.onreadystatechange = function(){
+                if(xhr1.readyState ===4 && xhr1.status ===200){
+                       if(JSON.parse(xhr1.responseText).code ==100){
+
+                       }
+                       else{
+                        window.location ='../login.html'
+                       }
+                }
+            }
+        gnzj.onclick = function(e){
+            var target =e.target;
+            if(target.nodeName == 'LI'){
+                var zjName =target.getAttribute('gn-zj');
+                JumpJudge(zjName);
+                listLi[num-1].className = '';
+                target.className ='on';
+                num = target.getAttribute('ind')
+               
+
+            }
+
+        }
+        function JumpJudge(attr){
+            switch(attr){
+                case 'addArticle':
+                    ajaxJump('ajax/addArticle.html','js/addArticle.js');
+                    break;
+                case 'articleList':
+                    ajaxJump('ajax/articleList.html','js/articleList.js');
+                    break;
+                case 'customerAccount':
+                    ajaxJump('ajax/customerAccount.html','js/customerAccount.js');
+                    break;
+                case 'articleComment':
+                    ajaxJump('ajax/articleComment.html','js/articleComment.js');
+                    break;
+                case 'personal':
+                    ajaxJump('ajax/personal.html','js/personal.js');
+                    break;
+
+            }
+        }
+        function ajaxJump(uri,urijs){
+        	var xhr = new XMLHttpRequest();
+            xhr.open('GET',uri);
+            xhr.setRequestHeader('Content-Type','text/html');
+            xhr.send(null);
+            xhr.onreadystatechange = function(){
+                if(xhr.readyState ===4 && xhr.status ===200){
+                	var message = xhr.responseText;
+                	var myScript = document.createElement('script');
+                	myScript.type = 'text/javascript';
+                	myScript.src = urijs;
+                	listContent.innerHTML = message;
+                	listContent.appendChild(myScript);
+                }
+            }   
+        }
+function findUser(){
+    var uStr = window.location.search;
+    var arr = uStr.split('=');  
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST','/findIdAdmin');
+    xhr.setRequestHeader('Content-Type','application/json');
+    xhr.send(JSON.stringify({id:arr[1]}));
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState ===4 && xhr.status ===200){
+            if(xhr.responseText == 'null'){
+                window.location = 'login.html';
+            }
+            else{
+                var message = JSON.parse(xhr.responseText);
+                cx_id = message.adminUserId,
+                cx_name = message.adminUserName,
+                cx_sex = message.adminUserSex,
+                cx_age = message.adminUserAge
+                /*cx_img = message.adminUserImg*/
+                if(message.adminUserSex){
+                    cx_sex = '男'
+                }
+                else{
+                    cx_sex = '女' 
+                }   
+            }
+        }
+    }
+}
+findUser();
+    </script>
+</body>
+</html>                                               

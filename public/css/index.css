@@ -1,0 +1,324 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.main{
+	width: 1920px;
+	font-family: "微软雅黑";
+}
+.head{
+	height: 120px;
+	background: #1e90ff;
+}
+.content{
+	height: 1612px;
+	padding: 1px;
+}
+
+.list{
+	height: 1050px;
+	width: 1200px;
+	margin: 30px 0 0 360px;
+
+}
+.footer{
+	height: 160px;
+	background: #2a2e39;
+	margin-top: 64px;
+}
+.head img{
+	margin: 42px 0 0 360px;
+}
+#ulogin{
+	float: right;
+	margin: 45px 360px 0 0;
+
+}
+
+#ulogin a{
+	display: block;
+	float: left;
+	height: 30px;
+	width: 50px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 2px;
+	color: #000;
+	font-size: 14px;
+	border:1px solid #fff;
+	margin-left: 10px;
+}
+#ulogin #login{
+	color: #fff;
+
+}
+#register{
+	background: #fff;
+
+}
+#useron{
+	float: right;
+	margin: 0 360px 0 0;
+
+}
+#useron img{
+	margin: 30px 10px 0 0;
+}
+#useron span{
+	float: right;
+	color: #fff;
+	height: 120px;
+	line-height: 120px;
+	letter-spacing: 2px;
+}
+#useron a{
+	float: right;
+	color: #fff;
+	height: 120px;
+	margin:0 0 0 10px;
+	line-height: 120px;
+	letter-spacing: 2px;
+}
+
+.news{
+	height: 440px;
+	width: 1200px;
+	margin: 30px 0 0 360px;
+}
+.news .news_left{
+	float: left;
+	width: 240px;
+	height: 440px;
+	background-color: #2a2e39;
+}
+.news_left img{
+	margin: 25px 0 0 25px;
+}
+.news_left span{
+	display: block;
+	color: #fff;
+	font-size: 18px;
+	margin: 15px 0 0 25px;
+}
+#news_right{
+	float: right;
+	width: 910px;
+	height: 440px;
+	position: relative;
+	overflow: hidden;
+	
+	
+}
+#news_right a{
+	display: block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: white;
+	background: #000;
+	font-family: "黑体";
+	text-decoration: none;
+	position: absolute;
+	top: 50%;
+	margin: -30px 0 0 0; 
+	font-size: 40px;
+	opacity: 0.7;
+}
+#lunbo li{
+	float: left;
+	
+}
+#lunbo{
+	position: absolute;
+}
+#prev{
+	left: 20px;
+}
+#next{
+	right: 20px;
+}
+.list_left{
+	float: left;
+	width: 720px;
+	height: 1050px;
+}
+.list_right{
+	float: right;
+	width: 430px;
+	height: 1050px;
+
+}
+
+.list_left .nav{
+	height: 50px;
+	width: 720px;
+}
+.nav a{
+	float: left;
+	height: 50px;
+	width: 120px;
+	line-height: 50px;
+	text-align: center;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+.nav a:hover{
+	background-color: #1e90ff;
+	color: #fff;
+
+}
+
+.list_cont ul li{
+	height: 250px;
+	border-bottom: 1px solid #cccccc;
+}
+.list_cont img{
+	float: left;
+	margin: 40px 0 0 0;
+}
+.list_cont h3{
+	float: left;
+	margin: 40px 0 0 30px;
+	color: #fc0202;
+	font-size: 12px;
+	font-weight: bold;
+
+}
+.list_cont p{
+	float: left;
+	font-size: 12px;
+	width: 488px;
+	height: 60px;
+	margin: -110px 0 0 230px;
+
+}
+.list_cont span{
+	float: left;
+	height: 20px;
+	width: 180px;
+	background:url(../images/index/date1.png) no-repeat;
+	text-indent: 32px;
+	font-size: 12px;
+	margin: -25px 0 0 230px;
+}
+.list_cont a{
+	float: left;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #1e90ff;
+	color: #fff;
+	font-size: 12px;
+	margin: -30px 0 0 630px;
+	border-radius: 5px;
+}
+.list_rg p{
+	display: block;
+	height: 50px;
+	width: 430px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	border-bottom: 1px solid #cccccc;
+
+}
+.list_right ul {
+	margin-top: 40px;
+}
+.list_right ul li {
+	height: 104px;
+	margin-top: 18px;
+}
+
+.list_right img{
+	float: left;
+}
+.lirg{
+	float: left;
+	font-size: 14px;
+	color: #000;
+	margin: 20px 0 0 30px;
+}
+.list_right span {
+	float: left;
+	margin: 26px 0 0 30px;
+	font-size: 12px;
+	color: #cccccc;
+	text-indent: 15px;
+}
+
+.list_yun p{
+	display: block;
+	height: 50px;
+	width: 430px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #000;
+	margin-top: 20px;
+	border-bottom: 1px solid #cccccc;
+
+}
+.tab ul{
+	margin: 30px 0 0 0;
+	width: 275px;
+}
+.tab ul li{
+	float: left;
+	height: 30px;
+	width: 70px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 12px;
+	border-radius: 5px;
+	margin-top: 10px;
+
+
+}
+.tab ul a{
+	color: #fff;
+
+}
+
+.foot_nav{
+	margin: 0 0 0 360px;
+	padding-top: 55px;
+	color: #fff;
+	font-size: 12px;
+}
+.foot_nav a{
+	color: #fff;
+}
+.foot_nav span{
+	margin: 0 8px 0 8px;
+}
+.foot_nav p{
+	margin-top: 22px;
+}
+.footer img{
+	float: right;
+	margin:-67px 360px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

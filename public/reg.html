@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>注册</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+			margin-top: 15px;
+		}
+		.main{
+			width: 400px;
+			height: 600px;
+			background: pink;
+			border-radius: 5px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: -300px 0 0 -200px;
+		}
+		ul{
+			text-align: center;
+			margin-top:50px;
+		}
+		input{
+			height: 35px;
+			width: 250px;
+		}
+		#file{
+			display: none;
+		}
+		#headerImg{
+			display: block;
+			width: 150px;
+			height: 150px;
+			border:3px solid #000;
+			position: relative;
+			left: 50%;
+			margin-left: -75px;
+		}
+		#headerImg img{
+			width: 100%;
+			height: 100%;
+		}
+        #usex input{
+            height: 25px;
+            width: 25px;
+            margin:0 0 0 10px;
+        }
+        #usex span{
+            margin:0 0 0 20px;
+            line-height: 25px;
+            
+        }
+
+	</style>
+</head>
+<body>
+    <div class="main">
+    	<ul>
+    	    <li>
+    	    	<input type="file" name="" id="file">
+    	    	<a href="javascript:;" id="headerImg"><img src="images/he1.png" id="img1"></a>
+    	    </li>
+    		<li>
+    			<input type="text" name="" placeholder="请输入账号" id="unid">
+    		</li>
+    		<li>
+    			<input type="password" name="" placeholder="请输入密码" id="upwd">
+    		</li>
+    		<li>
+    			<input type="text" name="" placeholder="请输入姓名" id="uname">
+    		</li>
+            <li id="usex">
+                <span>男<input name="sex" type="radio" checked="checked"></span>
+                <span>女<input name="sex" type="radio"></span>
+            </li>
+            <li>
+                <input type="text" name="" placeholder="输入年龄" id="uage">
+            </li>
+    		<li>
+    			<input type="button" name="" value="注册" id="btn">
+    		</li>
+    	</ul>
+    </div>
+
+    <script type="text/javascript">
+        var file = document.getElementById('file');
+        var hearderImg = document.getElementById('headerImg');
+        var img1 = document.getElementById('img1');
+        headerImg.onclick = function(){
+        	file.click();
+        	file.onchange = function(){
+        		console.log(file.value)
+        		console.log(file.files[0])
+        		if(file.files[0].type =='image/jpeg' || file.files[0].type == 'image/png'){
+        			if(file.files[0].size < 100000){
+        				var tp = new FormData;
+        				tp.append('myfile',file.files[0]);
+        				var xhr1 = new XMLHttpRequest();
+        				xhr1.open('POST','/tpmdata');
+        				xhr1.send(tp);
+        				xhr1.onreadystatechange = function(){
+			                if(xhr1.readyState ===4 && xhr1.status ===200){
+			                	alert('上传成功')
+			                    var message = JSON.parse(xhr1.responseText);
+			                    var strIMG = message.src.substring(message.src.lastIndexOf('\\'))
+			                    img1.src = 'images/temp'+ strIMG;
+			                }
+			            }
+        			}
+        			else{
+        				alert('上传的图片过大')
+        			}
+
+        		}
+        	    else{
+        	    	alert('请选择图片文件')
+        	    }
+        	}
+        }
+
+
+
+
+
+
+
+    	var unid = document.getElementById('unid');
+    	var upwd = document.getElementById('upwd');
+    	var uname = document.getElementById('uname');
+        var userSex = document.getElementById("usex");
+        var listSex = userSex.getElementsByTagName("input");
+        var userAge = document.getElementById("uage");
+    	var btn = document.getElementById('btn');
+        listSex[0].checked = true;
+
+        btn.onclick = function(){
+            for (var i = 0; i < listSex.length; i++) {
+                if(listSex[i].checked){
+                    if(i==0){
+                        userSex = true;
+                    }
+                    else{
+                        userSex = false;
+                    }
+                }
+            }
+    		var jsonData = {
+    			adminUserId:unid.value,
+    			adminUserPwd:upwd.value,
+    			adminUserName:uname.value,
+                adminUserSex:userSex,
+                adminUserAge:userAge.value,
+                adminUserImg:hearderImg.value
+    		}
+            console.log(jsonData)
+    		var xhr = new XMLHttpRequest();
+    	    xhr.open('POST','/addAdmin');
+    	    xhr.setRequestHeader('Content-Type','application/json');
+    	    xhr.send(JSON.stringify(jsonData));
+    	    xhr.onreadystatechange = function(){
+    	    	if(xhr.readyState === 4 && xhr.status === 200){
+    	    		var message = JSON.parse(xhr.responseText);
+    	    		if(message.code ===100){
+    	    			alert("注册成功");
+    	    			window.location ='../admin/login.html';
+
+    	    		}
+
+    	        }
+    	    }
+    	}
+    </script>
+
+</body>
+</html>
